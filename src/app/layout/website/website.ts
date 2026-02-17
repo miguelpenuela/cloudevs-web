@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+import {RouterOutlet} from "@angular/router";
+
+@Component({
+  selector: 'app-website',
+  imports: [
+    RouterOutlet
+  ],
+  templateUrl: './website.html',
+  styleUrl: './website.scss',
+  standalone: true
+})
+export class Website {
+
+}
