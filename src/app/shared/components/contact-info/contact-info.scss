@@ -2,16 +2,18 @@
 
 .info-container {
   background: palette.$dark-primary-color;
-  color: palette.$primary-text;
+  color: palette.$white-color;
+  padding: 10px;
 }
 
 .contact-data {
   display: flex;
   flex-direction: row;
+  // border:1px solid red;
   align-items: center;
+  justify-content: center;
 }
 .contact-data_info {
   display: flex;
-  border:1px solid blue;
   margin-right: 10px;
 }

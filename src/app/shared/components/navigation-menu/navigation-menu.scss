@@ -1,0 +1,70 @@
+@use "../../../../styles/palette";
+
+.container-menu {
+  background: palette.$white-color;
+  padding: 15px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  //border:1px solid red;
+}
+
+.menu-icon {
+  display: flex;
+  flex: 1;
+  //border:1px solid blue;
+}
+
+.menu-options-container {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  align-items: center;
+  justify-content: center;
+  //border: 1px solid green;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: row;
+  //flex: 1;
+  //align-items: center;
+  //justify-content: center;
+  //border:1px solid yellow;
+}
+
+.menu-options_item, .menu-options_item-enfasis {
+  display: flex;
+}
+
+.menu-options_item-enfasis a {
+  color: palette.$white-color;
+  font-weight: bold;
+  text-decoration: none;
+  padding:10px;
+  background: palette.$dark-primary-color;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.menu-options_item a {
+  color: palette.$primary-text;
+  text-decoration: none;
+  padding:10px;
+}
+
+.menu-options_item a:hover {
+  color: palette.$primary-color;
+  border-bottom: 1px solid palette.$dark-primary-color;
+  border-radius: 5px;
+}
+
+.menu-options_item-enfasis a:hover {
+  color: palette.$primary-text;
+  background: palette.$white-color;
+  border: 1px solid palette.$dark-primary-color;
+  //border-radius: 5px;
+}
