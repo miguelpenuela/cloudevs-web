@@ -1,9 +1,17 @@
+@use "../../../../styles/palette";
+
 .info-container {
-  padding: 5px;
-  background: #00194C;
-  color: #FFFFFF;
+  background: palette.$dark-primary-color;
+  color: palette.$primary-text;
 }
 
 .contact-data {
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact-data_info {
+  display: flex;
+  border:1px solid blue;
+  margin-right: 10px;
 }
