@@ -3,7 +3,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: palette.$main-background;
+  //background: palette.$main-background;
+  background: #F3F7FD;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -18,14 +19,9 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-.hero-title {
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-
-.section-title {
-  font-size: 36px;
+p {
+  font-family: Roboto, sans-serif;
+  font-size: 14pt;
 }
 
 .title {
