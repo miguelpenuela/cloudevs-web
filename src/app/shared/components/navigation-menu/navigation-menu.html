@@ -1,4 +1,5 @@
 <div class="container-fluid container-menu">
+    <app-contact-info></app-contact-info>
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -9,32 +10,32 @@
             <div class="menu-options-container">
               <div class="menu-options">
                 <div class="menu-options_item">
-                  <a href="#home">
+                  <a [routerLink]="''">
                     <i class="fa-solid fa-house"></i> Inicio
                   </a>
                 </div>
                 <div class="menu-options_item">
-                  <a href="#services">
+                  <a [routerLink]="'services'">
                     <i class="fa-solid fa-desktop"></i> Servicios
                   </a>
                 </div>
                 <div class="menu-options_item">
-                  <a href="#portfolio">
+                  <a [routerLink]="'portfolio'">
                     <i class="fa-solid fa-briefcase"></i> Portafolio
                   </a>
                 </div>
                 <div class="menu-options_item">
-                  <a href="#blog">
+                  <a [routerLink]="'blog'">
                     <i class="fa-brands fa-blogger-b"></i> Blog
                   </a>
                 </div>
                 <div class="menu-options_item">
-                  <a href="#contact">
+                  <a [routerLink]="'contact'">
                     <i class="fa-solid fa-phone"></i> Contacto
                   </a>
                 </div>
                 <div class="menu-options_item-enfasis">
-                  <a href="#get-a-quote">
+                  <a [routerLink]="'get-a-quote'">
                     <i class="fa-regular fa-folder-open"></i> Obtener cotización
                   </a>
                 </div>

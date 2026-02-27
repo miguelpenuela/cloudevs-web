@@ -4,4 +4,36 @@ body {
   margin: 0;
   padding: 0;
   background: palette.$main-background;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.info-section {
+  padding-top: 130px;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.section-title {
+  font-size: 36px;
+}
+
+.title {
+  font-family: Roboto, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.subtitle {
+
 }
