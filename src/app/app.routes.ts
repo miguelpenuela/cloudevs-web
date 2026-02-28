@@ -11,6 +11,10 @@ export const routes: Routes = [
                 loadComponent: () => import('./features/home/home').then(m => m.Home),
             },
             {
+                path: 'home',
+                loadComponent: () => import('./features/home/home').then(m => m.Home),
+            },
+            {
                 path: 'about',
                 loadComponent: () => import('./features/about/about').then(m => m.About),
             },
@@ -29,6 +33,10 @@ export const routes: Routes = [
             {
                 path: 'services',
                 loadComponent: () => import('./features/services/services').then(m => m.Services),
+            },
+            {
+                path: 'get-a-quote',
+                loadComponent: () => import('./features/get-a-quote/get-a-quote').then(m => m.GetAQuote),
             }
         ]
     }

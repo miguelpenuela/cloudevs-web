@@ -1,0 +1,31 @@
+@use "../../../styles/palette";
+
+.contact-card {
+  background: palette.$white-color;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-card-icon {
+  //border: 1px solid red;
+  padding: 20px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  font-size: 36px;
+  color: palette.$dark-primary-color;
+}
+
+.contact-card-info {
+  //border: 1px solid blue;
+  padding: 10px;
+  display: flex;
+  flex: 3;
+}
+
+.contact-card-info_enfasis {
+  color: palette.$dark-primary-color;
+  font-size: 18px;
+  font-weight: bold;
+}

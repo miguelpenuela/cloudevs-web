@@ -8,7 +8,6 @@ import {ContactInfo} from '../../shared/components/contact-info/contact-info';
   imports: [
     RouterOutlet,
     NavigationMenu,
-    ContactInfo
   ],
   templateUrl: './website.html',
   styleUrl: './website.scss',

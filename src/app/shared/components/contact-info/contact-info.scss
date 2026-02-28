@@ -1,9 +1,33 @@
+@use "../../../../styles/palette";
+
 .info-container {
-  padding: 5px;
-  background: #00194C;
-  color: #FFFFFF;
+  background: palette.$dark-primary-color;
+  color: palette.$white-color;
 }
 
 .contact-data {
-
+  display: flex;
+  flex-direction: row;
+  // border:1px solid red;
+  align-items: center;
+  justify-content: center;
 }
+.contact-data_info {
+  display: flex;
+  margin-right: 10px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@media (max-width: 576px) {
+  .info-container {
+    display: none;
+  }
+}
+
+/* Medium devices (≥ 768px) */
+@media (max-width: 768px) {
+  .info-container {
+    display: none;
+  }
+}
+
