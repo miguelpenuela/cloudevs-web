@@ -1,0 +1,11 @@
+@if (infoCard) {
+  <div class="info-card__container" [style]="`background:`+backgroundColor">
+    <div class="info-card__container__code">
+      <div class="info-card__container__code-container">
+        <i [class]="infoCard.icon"></i>
+      </div>
+    </div>
+    <span class="info-card__container__title">{{infoCard.name}}</span>
+    <p class="info-card__container__description">{{infoCard.description}}</p>
+  </div>
+}

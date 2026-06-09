@@ -12,7 +12,7 @@
   <div class="row">
     @for (service of servicesList; track service.name) {
       <div class="col-xs-12 col-sm-12 col-md-4">
-        <app-service-card [serviceCardInfo]="service"></app-service-card>
+        <app-info-card [infoCard]="service" [backgroundColor]="'#f7f5f3'"></app-info-card>
       </div>
     }
   </div>

@@ -1,4 +1,4 @@
-export interface IServiceCardInfo {
+export interface IInfoCard {
   icon: string;
   name: string;
   description: string;
