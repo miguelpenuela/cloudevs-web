@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {RouterOutlet} from "@angular/router";
 import {NavigationMenu} from '../../shared/components/navigation-menu/navigation-menu';
 import {ContactInfo} from '../../shared/components/contact-info/contact-info';
@@ -11,7 +11,8 @@ import {ContactInfo} from '../../shared/components/contact-info/contact-info';
   ],
   templateUrl: './website.html',
   styleUrl: './website.scss',
-  standalone: true
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Website {
 

@@ -1,0 +1,22 @@
+.service-card {
+  &__container {
+    border:1px solid var(--border);
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin: 16px;
+    border-radius: var(--radius-md);
+
+    &__title {
+      font-weight: bold;
+      font-size: 16pt;
+      margin-bottom: 24px;
+    }
+
+    &__description {
+      font-size: 12pt;
+    }
+
+  }
+}

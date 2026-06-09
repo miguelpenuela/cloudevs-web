@@ -2,31 +2,37 @@
 
 .container-menu {
   background: palette.$white-color;
-  padding: 0px;
+  padding: 0;
   z-index: 100;
   position: fixed;
+}
+
+.logo {
+  width: 200px;
+  // border: 1px solid black;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
   flex: 1;
-  //border:1px solid red;
+  // border:1px solid red;
 }
 
 .menu-icon {
   display: flex;
   flex: 1;
-  //border:1px solid blue;
+  justify-content: center;
+  // border:1px solid blue;
 }
 
 .menu-options-container {
   display: flex;
   flex-direction: column;
   flex: 3;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  //border: 1px solid green;
+  // border: 1px solid green;
 }
 
 .menu-options {
@@ -40,6 +46,7 @@
 
 .menu-options_item, .menu-options_item-enfasis {
   display: flex;
+  font-weight: bold;
 }
 
 .menu-options_item-enfasis a {

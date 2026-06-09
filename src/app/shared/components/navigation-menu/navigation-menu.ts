@@ -5,7 +5,6 @@ import {RouterLink} from "@angular/router";
 @Component({
   selector: 'app-navigation-menu',
   imports: [
-    ContactInfo,
     RouterLink
   ],
   templateUrl: './navigation-menu.html',
