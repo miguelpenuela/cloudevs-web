@@ -1,9 +1,19 @@
-<div class="row justify-content-center">
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-        <div class="row info-section">
-            <div class="col-12">
-                <h1>Nuestros servicios</h1>
-            </div>
-        </div>
-    </div>
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-12">
+          <div class="row">
+              <div class="col-12">
+                  <h1>Soluciones completas para su negocio</h1>
+                  <p>Ofrecemos un amplio rango de servicios de desarrollo de software adaptados a tus necesidades específicas.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+    @for (service of servicesList; track service.name) {
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <app-info-card [infoCard]="service" [backgroundColor]="'#f7f5f3'"></app-info-card>
+      </div>
+    }
+  </div>
 </div>

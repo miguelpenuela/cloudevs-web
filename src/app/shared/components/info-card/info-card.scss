@@ -1,0 +1,38 @@
+.info-card {
+  &__container {
+    border:1px solid var(--border);
+    // background: var(--background);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    margin: 16px;
+    border-radius: var(--radius-md);
+
+    &__code {
+      display: flex;
+    }
+
+    &__code-container {
+      padding: 8px;
+      border-radius: var(--radius-md);
+      background: var(--primary-light);
+      margin-bottom: 24px;
+
+      i {
+        font-size: 18pt;
+        color: var(--primary);
+      }
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: 16pt;
+      margin-bottom: 24px;
+    }
+
+    &__description {
+      font-size: 12pt;
+    }
+
+  }
+}

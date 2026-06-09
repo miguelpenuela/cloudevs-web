@@ -1,9 +1,47 @@
-<div class="row justify-content-center">
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-        <div class="row info-section">
-            <div class="col-12">
-                <p class="title">Acerca de</p>
-            </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-5">
+      <div class="row">
+        <div class="col-12">
+          <h1>Expertos en transformación digital</h1>
+          <p>
+            Somos un equipo apasionado de desarrolladores, diseñadores y estrategas digitales con más de
+            10 años de experiencia creando soluciones tecnológicas innovadoras.
+          </p>
+          <p>
+            Nuestra misión es ayudar a empresas de todos los tamaños a alcanzar su máximo potencial a través
+            de la tecnología, entregando productos de software que no solo funcionan, sino que inspiran
+          </p>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <hr/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 statistic">
+          <span>150+</span>
+          <span>Clientes felices</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 statistic">
+          <span>50+</span>
+          <span>Desarrolladores</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 statistic">
+          <span>25</span>
+          <span>Paises</span>
+        </div>
+      </div>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-7">
+      <div class="row">
+        @for (card of values; track $index) {
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <app-info-card [infoCard]="card" [backgroundColor]="'#FFFFFF'"></app-info-card>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
 </div>
