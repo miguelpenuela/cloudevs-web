@@ -1,5 +1,4 @@
 <div class="container-fluid container-menu">
-    <!--<app-contact-info></app-contact-info>-->
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -42,9 +41,16 @@
                   </a>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
 </div>
+<button class="menu-mobile-btn" (click)="showMobileMenu()">
+  <div class="menu-mobile-btn__content">
+    <i class="fa fa-bars"></i>
+  </div>
+</button>
+<navigation-menu-mobile [menuOpen]="showMenu" (menuClosed)="handleMenuClosed()"></navigation-menu-mobile>

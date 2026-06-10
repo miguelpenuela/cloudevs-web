@@ -1,0 +1,52 @@
+<div
+  class="overlay"
+  [class.open]="menuOpen"
+  (click)="closeMenu()">
+</div>
+<nav
+  class="mobile-menu"
+  [class.open]="menuOpen">
+
+  <button
+    class="menu-mobile-btn"
+    (click)="closeMenu()">
+    <div class="menu-mobile-btn__content">
+      <i class="fa fa-times"></i>
+    </div>
+  </button>
+
+  <div class="menu-options-container-mobile">
+    <div class="menu-options-mobile">
+      <div class="menu-options_item">
+        <a (click)="goTo('home')">
+          Inicio
+        </a>
+      </div>
+      <div class="menu-options_item">
+        <a (click)="goTo('services')">
+          Servicios
+        </a>
+      </div>
+      <div class="menu-options_item">
+        <a (click)="goTo('about')">
+          Nosotros
+        </a>
+      </div>
+      <div class="menu-options_item">
+        <a (click)="goTo('portfolio')">
+          Proyectos
+        </a>
+      </div>
+      <div class="menu-options_item">
+        <a (click)="goTo('blog')">
+          Blog
+        </a>
+      </div>
+      <div class="menu-options_item-enfasis">
+        <a (click)="goTo('contact')">
+          Contacto
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

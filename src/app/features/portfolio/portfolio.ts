@@ -6,7 +6,6 @@ import {InfoCard} from '../../shared/components/info-card/info-card';
   selector: 'portfolio-section',
   imports: [
     EnfasisTag,
-    InfoCard
   ],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss',
