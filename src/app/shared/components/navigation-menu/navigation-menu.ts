@@ -25,7 +25,10 @@ export class NavigationMenu {
   }
 
   showMobileMenu() {
-    console.log('showMobileMenu...')
-    this.showMenu = !this.showMenu;
+    this.showMenu = true;
+  }
+
+  handleMenuClosed() {
+    this.showMenu = false;
   }
 }

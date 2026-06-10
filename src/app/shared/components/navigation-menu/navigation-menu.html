@@ -41,15 +41,16 @@
                   </a>
                 </div>
               </div>
-              <div class="menu-mobile-btn">
-                <button class="btn btn-primary" (click)="showMobileMenu()">
-                  <i class="fa fa-bars"></i>
-                </button>
-              </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
 </div>
-<navigation-menu-mobile [menuOpen]="showMenu"></navigation-menu-mobile>
+<button class="menu-mobile-btn" (click)="showMobileMenu()">
+  <div class="menu-mobile-btn__content">
+    <i class="fa fa-bars"></i>
+  </div>
+</button>
+<navigation-menu-mobile [menuOpen]="showMenu" (menuClosed)="handleMenuClosed()"></navigation-menu-mobile>

@@ -1,3 +1,4 @@
+@use "../navigation-menu/navigation-menu.scss";
 // Fondo oscuro detrás del menú
 .overlay {
   position: fixed;
@@ -19,9 +20,9 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 80%;
   height: 100vh;
-  background: #ffffff;
+  background: var(--primary-light);
   z-index: 999;
 
   display: flex;
@@ -35,29 +36,40 @@
     transform: translateX(0);
   }
 
-  .close-btn {
-    align-self: flex-end;
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-  }
+}
 
-  .nav-links {
-    margin-top: 3rem;
+.menu-mobile-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  right: 26px;
+  bottom: 100px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  border: 1px solid var(--primary-dark);
+
+  &__content {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-
-    a {
-      text-decoration: none;
-      color: #222;
-      font-size: 1.5rem;
-      font-weight: 500;
-
-      &:hover {
-        color: #1976d2;
-      }
-    }
+    justify-content: center;
   }
+
+  i {
+    color: var(--primary-dark);
+    font-size: 2rem;
+  }
+}
+
+.menu-options-container-mobile {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-options-mobile {
+  display: flex;
+  flex-direction: column;
 }
