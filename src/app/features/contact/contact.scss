@@ -1,31 +1,77 @@
-@use "../../../styles/palette";
-
-.contact-card {
-  background: palette.$white-color;
+.contact-info {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  display: flex;
-  flex-direction: row;
+
+  &__card {
+    // border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+    &__icon {
+      padding: 8px;
+      border-radius: var(--radius-md);
+      background: var(--primary-light);
+      margin-bottom: 24px;
+      // border: 1px solid red;
+
+      i {
+        font-size: 18pt;
+        color: var(--primary);
+      }
+    }
+
+    &__text {
+      // border: 1px solid blue;
+      display: flex;
+      flex-direction: column;
+      padding-left: 16px;
+
+      &__primary {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      &__secondary {
+
+      }
+    }
+  }
 }
 
-.contact-card-icon {
-  //border: 1px solid red;
-  padding: 20px;
+.enfasis-card {
   display: flex;
-  flex: 1;
-  justify-content: center;
-  font-size: 36px;
-  color: palette.$dark-primary-color;
-}
+  flex-direction: column;
+  padding: 16px;
+  background: var(--primary);
+  color: var(--text-light);
+  border-radius: var(--radius-md);
 
-.contact-card-info {
-  //border: 1px solid blue;
-  padding: 10px;
-  display: flex;
-  flex: 3;
-}
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
 
-.contact-card-info_enfasis {
-  color: palette.$dark-primary-color;
-  font-size: 18px;
-  font-weight: bold;
+  &__stats-container {
+    display: flex;
+    flex-direction: row;
+
+    &__stat {
+      display: flex;
+      flex-direction: column;
+      margin-right: 24px;
+      // border:1px solid red;
+
+      &__value {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+    }
+
+  }
+
 }

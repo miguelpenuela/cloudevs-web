@@ -240,6 +240,16 @@ i {
   border-radius: var(--radius-md);
   padding: 10px;
   margin: 10px;
+
+  &__value {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  &__description {
+
+  }
 }
 
 .section {

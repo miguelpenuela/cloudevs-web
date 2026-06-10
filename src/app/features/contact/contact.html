@@ -1,45 +1,101 @@
-<div class="row justify-content-center">
-    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-        <div class="row info-section">
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="contact-card">
-              <div class="contact-card-icon">
-                <i class="fa-solid fa-phone-volume"></i>
-              </div>
-              <div class="contact-card-info">
-                <p>
-                  <label>(+57) 314 435 2585</label><br/>
-                  <label class="contact-card-info_enfasis">Llámanos en cualquier momento</label>
-                </p>
-              </div>
-            </div>
+<div class="container">
+  <enfasis-tag [tagIcon]="''" [tagLabel]="'Contacto'"></enfasis-tag>
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-12" style="text-align: center">
+          <h1>Hablemos de tu proyecto</h1>
+          <p>¿Tienes una idea? Estamos lista para convertirla en realidad. Contáctanos hoy mismo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6">
+      <div class="contact-info">
+        <div class="contact-info__card">
+          <div class="contact-info__card__icon">
+            <i class="fa fa-at"></i>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="contact-card">
-              <div class="contact-card-icon">
-                <i class="fa-solid fa-at"></i>
-              </div>
-              <div class="contact-card-info">
-                <p>
-                  <label>admin@cloudevs.co</label><br/>
-                  <label class="contact-card-info_enfasis">Enviar correo electrónico</label>
-                </p>
-              </div>
-            </div>
+          <div class="contact-info__card__text">
+            <span class="contact-info__card__text__primary">Email</span>
+            <span class="contact-info__card__text__secondary">admin@cloudevs.co</span>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="contact-card">
-              <div class="contact-card-icon">
-                <i class="fa-regular fa-clock"></i>
-              </div>
-              <div class="contact-card-info">
-                <p>
-                  <label>Horario de apertura</label><br/>
-                  <label class="contact-card-info_enfasis">Lun - Vie (8:00 a.m. - 05:00 p.m.)</label>
-                </p>
-              </div>
+        </div>
+        <div class="contact-info__card">
+          <div class="contact-info__card__icon">
+            <i class="fa fa-phone"></i>
+          </div>
+          <div class="contact-info__card__text">
+            <span class="contact-info__card__text__primary">Teléfono</span>
+            <span class="contact-info__card__text__secondary">(+57) 313 616 4039</span>
+          </div>
+        </div>
+        <div class="contact-info__card">
+          <div class="contact-info__card__icon">
+            <i class="fa fa-location-dot"></i>
+          </div>
+          <div class="contact-info__card__text">
+            <span class="contact-info__card__text__primary">Oficina</span>
+            <span class="contact-info__card__text__secondary">Cra 1 #36 - 50 San mateo - Soacha</span>
+          </div>
+        </div>
+      </div>
+      <div class="enfasis-card">
+        <span class="enfasis-card__title">¿Listo para empezar?</span>
+        <p>Únete a los clientes que confían en nosotros para sus proyectos de software.</p>
+        <div class="enfasis-card__stats-container">
+          <div class="enfasis-card__stats-container__stat">
+            <span class="enfasis-card__stats-container__stat__value">24/7</span>
+            <span>Soporte</span>
+          </div>
+          <div class="enfasis-card__stats-container__stat">
+            <span class="enfasis-card__stats-container__stat__value">100%</span>
+            <span>Transparencia</span>
+          </div>
+          <div class="enfasis-card__stats-container__stat">
+            <span class="enfasis-card__stats-container__stat__value">Ágil</span>
+            <span>Metodología</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6">
+      <form>
+        <div class="row mb-3">
+          <div class="col-12">
+            <label>Nombre completo</label>
+            <input type="text" class="form-control" placeholder="Juan Perez">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <label>Correo electrónico</label>
+            <input type="text" class="form-control" placeholder="juan@mail.com">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <label>Empresa</label>
+            <input type="text" class="form-control" placeholder="Mi Empresa S.A.">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <label>Mensaje</label>
+            <textarea class="form-control" rows="5" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary">
+                Enviar mensaje <i class="fa-regular fa-paper-plane"></i>
+              </button>
             </div>
           </div>
         </div>
+      </form>
     </div>
+  </div>
 </div>
