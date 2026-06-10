@@ -47,6 +47,10 @@
 .menu-options_item, .menu-options_item-enfasis {
   display: flex;
   font-weight: bold;
+
+  a {
+    cursor: pointer;
+  }
 }
 
 .menu-options_item-enfasis a {

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import {ContactInfo} from "../contact-info/contact-info";
-import {RouterLink} from "@angular/router";
+import {Component, inject} from '@angular/core';
+import {RouterLink, Router} from "@angular/router";
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -12,5 +12,12 @@ import {RouterLink} from "@angular/router";
   standalone: true
 })
 export class NavigationMenu {
+
+  private router: Router = inject(Router);
+  private scroller = inject(ViewportScroller);
+
+  goTo(sectionId: string) {
+    this.scroller.scrollToAnchor(sectionId);
+  }
 
 }

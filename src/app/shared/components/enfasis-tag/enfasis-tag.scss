@@ -1,0 +1,19 @@
+.enfasis {
+  // border: 1px solid red;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 26px;
+
+  &__container {
+    // border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    border-radius: var(--radius-md);
+    padding: 10px;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+  }
+
+}

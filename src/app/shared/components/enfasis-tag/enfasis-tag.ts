@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-enfasis-tag',
+  selector: 'enfasis-tag',
   imports: [],
   templateUrl: './enfasis-tag.html',
   styleUrl: './enfasis-tag.scss',
 })
 export class EnfasisTag {
-
+  @Input() tagIcon: string = '';
+  @Input() tagLabel: string = '';
 }
