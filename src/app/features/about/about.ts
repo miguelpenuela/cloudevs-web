@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import {IInfoCard} from '../../shared/models/IInfoCard';
 import {InfoCard} from '../../shared/components/info-card/info-card';
+import {EnfasisTag} from '../../shared/components/enfasis-tag/enfasis-tag';
 
 @Component({
   selector: 'about-section',
   imports: [
-    InfoCard
+    InfoCard,
+    EnfasisTag
   ],
   templateUrl: './about.html',
   styleUrl: './about.scss',

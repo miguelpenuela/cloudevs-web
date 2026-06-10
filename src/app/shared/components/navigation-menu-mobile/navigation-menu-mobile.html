@@ -1,0 +1,23 @@
+<div
+  class="overlay"
+  [class.open]="menuOpen"
+  (click)="closeMenu()">
+</div>
+<nav
+  class="mobile-menu"
+  [class.open]="menuOpen">
+
+  <button
+    class="close-btn"
+    (click)="closeMenu()">
+    ×
+  </button>
+
+  <div class="nav-links">
+    <a routerLink="/" (click)="closeMenu()">Inicio</a>
+    <a routerLink="/servicios" (click)="closeMenu()">Servicios</a>
+    <a routerLink="/nosotros" (click)="closeMenu()">Nosotros</a>
+    <a routerLink="/contacto" (click)="closeMenu()">Contacto</a>
+  </div>
+
+</nav>
