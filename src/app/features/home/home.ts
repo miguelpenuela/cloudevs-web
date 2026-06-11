@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {EnfasisTag} from '../../shared/components/enfasis-tag/enfasis-tag';
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'home-section',
@@ -10,5 +11,11 @@ import {EnfasisTag} from '../../shared/components/enfasis-tag/enfasis-tag';
   styleUrl: './home.scss',
 })
 export class Home {
+
+  private scroller = inject(ViewportScroller);
+
+  goTo(sectionId: string) {
+    this.scroller.scrollToAnchor(sectionId);
+  }
 
 }
