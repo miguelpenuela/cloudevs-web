@@ -27,10 +27,11 @@ export class NavigationMenuMobile implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log('NavigationMenuMobile.changes: ', changes);
+    // console.log('NavigationMenuMobile.changes: ', changes);
   }
 
   goTo(sectionId: string) {
+    this.closeMenu();
     this.scroller.scrollToAnchor(sectionId);
   }
 }
