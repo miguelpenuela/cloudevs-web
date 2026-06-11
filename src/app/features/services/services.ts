@@ -18,7 +18,7 @@ export class Services {
     {
       icon: 'fa fa-code',
       name: 'Desarrollo Web',
-      description: 'Aplicaciones web modernas y escalables cons las últimas tecnologías.'
+      description: 'Aplicaciones web modernas y escalables con las últimas tecnologías.'
     },
     {
       icon: 'fa fa-mobile-screen',

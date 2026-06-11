@@ -72,4 +72,35 @@
 .menu-options-mobile {
   display: flex;
   flex-direction: column;
+  flex: 1;
+
+  &__item, &__item-enfasis {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+
+    a {
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      border: 1px solid var(--primary-dark);
+      margin-bottom: 1rem;
+      border-radius: var(--radius-md);
+    }
+  }
+
+  &__item-enfasis {
+
+    a {
+      color: var(--text-light);
+      font-weight: bold;
+      text-decoration: none;
+      padding:10px;
+      background: var(--primary);
+      border-radius: var(--radius-md);
+    }
+
+  }
+
 }

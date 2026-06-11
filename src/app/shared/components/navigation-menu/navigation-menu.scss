@@ -71,17 +71,17 @@
 }
 
 .menu-options_item-enfasis a {
-  color: palette.$white-color;
+  color: var(--text-light);
   font-weight: bold;
   text-decoration: none;
   padding:10px;
-  background: palette.$dark-primary-color;
+  background: var(--primary);
   border-radius: 5px;
   margin-left: 20px;
 }
 
 .menu-options_item a {
-  color: palette.$primary-text;
+  color: var(--text-primary);
   text-decoration: none;
   padding:10px;
 }
