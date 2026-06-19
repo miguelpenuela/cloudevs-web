@@ -1,0 +1,11 @@
+<div class="project-container">
+  <img [src]="`/img/${project.image}`">
+  <span class="project-container__topic">{{project.topic}}</span>
+  <span class="project-container__title">{{project.title}}</span>
+  <p class="project-container__description">{{project.description}}</p>
+  <div class="project-container__tags-container">
+    @for (tag of project.tags; track $index) {
+      <span class="project-container__tags-container__tag">{{ tag }}</span>
+    }
+  </div>
+</div>
