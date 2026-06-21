@@ -10,4 +10,11 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    @for (p of projects; track $index) {
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <project-card [project]="p"></project-card>
+      </div>
+    }
+  </div>
 </div>

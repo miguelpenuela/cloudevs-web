@@ -4,9 +4,7 @@ import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'navigation-menu-mobile',
-  imports: [
-    RouterLink
-  ],
+  imports: [],
   templateUrl: './navigation-menu-mobile.html',
   styleUrl: './navigation-menu-mobile.scss',
 })
