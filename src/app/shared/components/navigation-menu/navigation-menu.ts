@@ -21,6 +21,7 @@ export class NavigationMenu {
   showMenu = false;
 
   goTo(sectionId: string) {
+    this.router.navigate(['/']);
     this.scroller.scrollToAnchor(sectionId);
   }
 
