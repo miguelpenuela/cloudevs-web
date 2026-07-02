@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import {IInfoCard} from '../../shared/models/IInfoCard';
 import {InfoCard} from '../../shared/components/info-card/info-card';
 import {EnfasisTag} from '../../shared/components/enfasis-tag/enfasis-tag';
 import {AnimateOnScrollDirective} from '../../shared/directives/animate-on-scroll.directive';
+import {SeoService} from '../../shared/services/seo.service';
 
 @Component({
   selector: 'about-section',
@@ -14,7 +15,17 @@ import {AnimateOnScrollDirective} from '../../shared/directives/animate-on-scrol
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
-export class About {
+export class About implements OnInit {
+  private seo = inject(SeoService);
+
+  ngOnInit() {
+    this.seo.set({
+      title: 'Sobre Nosotros | Cloudevs',
+      description: 'Somos un equipo apasionado con más de 10 años de experiencia en transformación digital. Conoce nuestros valores y nuestra misión.',
+      keywords: 'equipo desarrollo software, transformación digital, consultoría tecnológica Colombia',
+      canonical: 'https://www.cloudevs.co/about',
+    });
+  }
 
   values: IInfoCard[] = [
     {

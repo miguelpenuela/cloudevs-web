@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /get-a-quote
+
+Sitemap: https://www.cloudevs.co/sitemap.xml

@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import {IInfoCard} from '../../shared/models/IInfoCard';
 import {InfoCard} from '../../shared/components/info-card/info-card';
 import {EnfasisTag} from '../../shared/components/enfasis-tag/enfasis-tag';
 import {AnimateOnScrollDirective} from '../../shared/directives/animate-on-scroll.directive';
+import {SeoService} from '../../shared/services/seo.service';
 
 @Component({
   selector: 'services-section',
@@ -14,7 +15,17 @@ import {AnimateOnScrollDirective} from '../../shared/directives/animate-on-scrol
   templateUrl: './services.html',
   styleUrl: './services.scss',
 })
-export class Services {
+export class Services implements OnInit {
+  private seo = inject(SeoService);
+
+  ngOnInit() {
+    this.seo.set({
+      title: 'Servicios | Cloudevs',
+      description: 'Desarrollo web, apps móviles, Cloud & DevOps, Backend & APIs, UX/UI y consultoría tech. Soluciones escalables para tu negocio.',
+      keywords: 'desarrollo web, apps móviles, cloud devops AWS, backend APIs, UX UI diseño, consultoría tech',
+      canonical: 'https://www.cloudevs.co/services',
+    });
+  }
 
   servicesList: IInfoCard[] = [
     {
