@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {EnfasisTag} from "../../shared/components/enfasis-tag/enfasis-tag";
 
 @Component({
   selector: 'app-blog',
-  imports: [],
+    imports: [
+        EnfasisTag
+    ],
   templateUrl: './blog.html',
   styleUrl: './blog.scss',
 })
