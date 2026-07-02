@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import {IInfoCard} from '../../shared/models/IInfoCard';
 import {InfoCard} from '../../shared/components/info-card/info-card';
 import {EnfasisTag} from '../../shared/components/enfasis-tag/enfasis-tag';
+import {AnimateOnScrollDirective} from '../../shared/directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'services-section',
   imports: [
     InfoCard,
-    EnfasisTag
+    EnfasisTag,
+    AnimateOnScrollDirective,
   ],
   templateUrl: './services.html',
   styleUrl: './services.scss',
