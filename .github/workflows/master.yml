@@ -9,27 +9,53 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Configure Aws Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
-          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-          aws-region: us-east-1
-
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup NodeJS
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Run Build
+      - name: Build
         run: npm run build
 
-      - name: Deploy
-        if: success()
-        run: aws s3 sync ./dist/cloudevs-web/server s3://cloudevs-website
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      # Assets with hashed filenames can be cached indefinitely
+      - name: Deploy static assets
+        run: |
+          aws s3 sync ./dist/cloudevs-web/browser s3://cloudevs-website \
+            --exclude "*.html" \
+            --exclude "*.xml" \
+            --exclude "robots.txt" \
+            --cache-control "public, max-age=31536000, immutable" \
+            --delete
+
+      # HTML, sitemap and robots.txt must always be fresh for crawlers
+      - name: Deploy HTML and index files
+        run: |
+          aws s3 sync ./dist/cloudevs-web/browser s3://cloudevs-website \
+            --exclude "*" \
+            --include "*.html" \
+            --include "*.xml" \
+            --include "robots.txt" \
+            --cache-control "no-cache, must-revalidate" \
+            --delete
+
+      # Requires CLOUDFRONT_DISTRIBUTION_ID secret — skip if not set
+      - name: Invalidate CloudFront cache
+        if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID != '' }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
