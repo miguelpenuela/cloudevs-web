@@ -267,3 +267,76 @@ i {
     padding: 10px 0;
   }
 }
+
+/* =========================================================
+   Hero — load-time staggered animations
+   ========================================================= */
+
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroImageIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+
+.hero-animate {
+  animation: heroSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-delay-1 { animation-delay: 0.05s; }
+.hero-delay-2 { animation-delay: 0.2s; }
+.hero-delay-3 { animation-delay: 0.35s; }
+.hero-delay-4 { animation-delay: 0.5s; }
+.hero-delay-5 { animation-delay: 0.65s; }
+
+.hero-image-animate {
+  animation: heroImageIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+
+/* =========================================================
+   Scroll-reveal animations (AnimateOnScrollDirective)
+   ========================================================= */
+
+.anim-hidden {
+  opacity: 0;
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up    { transform: translateY(32px); }
+.fade-left  { transform: translateX(-32px); }
+.fade-right { transform: translateX(32px); }
+.fade-in    { transform: none; }
+
+.anim-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate,
+  .hero-image-animate {
+    animation: none;
+  }
+
+  .anim-hidden {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

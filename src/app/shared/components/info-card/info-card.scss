@@ -1,12 +1,28 @@
 .info-card {
   &__container {
-    border:1px solid var(--border);
-    // background: var(--background);
+    border: 1px solid var(--border);
     display: flex;
     flex-direction: column;
     padding: 24px;
     margin: 16px;
     border-radius: var(--radius-md);
+    transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.28s ease,
+                border-color 0.28s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-light);
+
+      .info-card__container__code-container {
+        background: var(--primary);
+
+        i {
+          color: #fff;
+        }
+      }
+    }
 
     &__code {
       display: flex;
@@ -17,10 +33,12 @@
       border-radius: var(--radius-md);
       background: var(--primary-light);
       margin-bottom: 24px;
+      transition: background 0.28s ease;
 
       i {
         font-size: 18pt;
         color: var(--primary);
+        transition: color 0.28s ease;
       }
     }
 
@@ -33,6 +51,5 @@
     &__description {
       font-size: 12pt;
     }
-
   }
 }
