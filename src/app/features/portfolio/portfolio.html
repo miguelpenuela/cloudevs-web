@@ -14,7 +14,7 @@
   </div>
   <div class="row mb-3">
     <div class="col-12">
-      <category-tag [category]="'Todo'"/>
+      <category-tag [category]="'Todo'" (onSelectCategory)="handleCategorySelected($event)"/>
       @for (c of categories; track $index) {
         <category-tag [category]="c" (onSelectCategory)="handleCategorySelected($event)"/>
       }

@@ -9,5 +9,5 @@ export interface ProjectInfoCard {
   path: string;
   externalLink: string;
   image: string;
-  category: CategoryEnum;
+  category: string;
 }
