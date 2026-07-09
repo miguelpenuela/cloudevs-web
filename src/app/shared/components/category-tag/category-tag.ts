@@ -12,7 +12,6 @@ export class CategoryTag {
   @Output() onSelectCategory: EventEmitter<any> = new EventEmitter();
 
   handleSelection(): void {
-    console.log(`Category Selected: ${this.category}`);
     this.onSelectCategory.emit(this.category);
   }
 

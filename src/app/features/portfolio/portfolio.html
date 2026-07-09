@@ -1,4 +1,3 @@
-<div class="section__white">
 <div class="container">
   <div animateOnScroll="fade-up">
     <enfasis-tag [tagIcon]="''" [tagLabel]="'Portafolio'"></enfasis-tag>
@@ -17,7 +16,7 @@
     <div class="col-12">
       <category-tag [category]="'Todo'"/>
       @for (c of categories; track $index) {
-        <category-tag [category]="c"/>
+        <category-tag [category]="c" (onSelectCategory)="handleCategorySelected($event)"/>
       }
     </div>
   </div>
@@ -28,5 +27,4 @@
       </div>
     }
   </div>
-</div>
 </div>

@@ -21,7 +21,7 @@ import {CategoryTag} from '../../shared/components/category-tag/category-tag';
 })
 export class Portfolio implements OnInit {
 
-  public categories: string[] = Object.keys(CategoryEnum);
+  public categories: string[] = Object.values(CategoryEnum);
 
   private seo = inject(SeoService);
 
@@ -52,8 +52,8 @@ export class Portfolio implements OnInit {
     {
       topic: 'Software as a Service',
       title: 'Factory',
-      description: 'Plataforma para la gestión de su negocio, realice la configuración para la producción de sus productos' +
-        'mediante la configuración de formulaciones, ordenes de producción, ordenes de envasado e inventarios.',
+      description: `Plataforma para la gestión de su negocio, realice la configuración para la producción de sus productos,
+      formulaciones e inventarios.`,
       tags: [
         TechnologiesEnum.ANGULAR,
         TechnologiesEnum.JAVA,
@@ -66,4 +66,8 @@ export class Portfolio implements OnInit {
       category: CategoryEnum.CustomSoftware
     }
   ];
+
+  handleCategorySelected(selectedCategory: any) {
+    console.log('selectedCategory', selectedCategory);
+  }
 }

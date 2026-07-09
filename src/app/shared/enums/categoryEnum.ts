@@ -1,4 +1,4 @@
 export enum CategoryEnum {
-  SoftwareAsAService = 'SoftwareAsAService',
-  CustomSoftware = 'CustomSoftware',
+  SoftwareAsAService = 'Software como Servicio',
+  CustomSoftware = 'Soluciones a la medida',
 }
