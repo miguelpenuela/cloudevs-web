@@ -1,5 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {ProjectInfoCard} from '../../models/IProjectInfoCard';
+import {TechnologiesEnum} from '../../enums/technologiesEnum';
+import {CategoryEnum} from '../../enums/categoryEnum';
 
 @Component({
   selector: 'project-card',
@@ -12,9 +14,10 @@ export class ProjectCard {
     topic: 'desarrollo web',
     title: 'E-commerce Platform',
     description: 'Plataforma completa de comercio electrónico con gestión de inventario, pagos y analytics.',
-    tags: ["React", "Node.js", "MongoDB"],
+    tags: [TechnologiesEnum.REACT, TechnologiesEnum.NODEJS, TechnologiesEnum.MONGO_DB],
     path: "",
     externalLink: "",
     image: "dummy.png",
+    category: CategoryEnum.SoftwareAsAService
   };
 }

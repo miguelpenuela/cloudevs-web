@@ -12,7 +12,6 @@ import {SeoService} from '../../shared/services/seo.service';
     Home,
     Services,
     About,
-    Portfolio,
     Contact
   ],
   templateUrl: './landing.html',

@@ -1,3 +1,4 @@
+<div class="section__white">
 <div class="container">
   <div animateOnScroll="fade-up">
     <enfasis-tag [tagIcon]="''" [tagLabel]="'Portafolio'"></enfasis-tag>
@@ -12,6 +13,14 @@
       </div>
     </div>
   </div>
+  <div class="row mb-3">
+    <div class="col-12">
+      <category-tag [category]="'Todo'"/>
+      @for (c of categories; track $index) {
+        <category-tag [category]="c"/>
+      }
+    </div>
+  </div>
   <div class="row">
     @for (p of projects; track $index) {
       <div class="col-xs-12 col-sm-12 col-md-4" animateOnScroll="fade-up" [animateDelay]="200 + ($index * 120)">
@@ -19,4 +28,5 @@
       </div>
     }
   </div>
+</div>
 </div>

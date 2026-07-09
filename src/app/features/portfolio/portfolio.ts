@@ -4,6 +4,9 @@ import {ProjectCard} from '../../shared/components/project-card/project-card';
 import {ProjectInfoCard} from '../../shared/models/IProjectInfoCard';
 import {AnimateOnScrollDirective} from '../../shared/directives/animate-on-scroll.directive';
 import {SeoService} from '../../shared/services/seo.service';
+import {CategoryEnum} from '../../shared/enums/categoryEnum';
+import {TechnologiesEnum} from '../../shared/enums/technologiesEnum';
+import {CategoryTag} from '../../shared/components/category-tag/category-tag';
 
 @Component({
   selector: 'portfolio-section',
@@ -11,11 +14,15 @@ import {SeoService} from '../../shared/services/seo.service';
     EnfasisTag,
     ProjectCard,
     AnimateOnScrollDirective,
+    CategoryTag,
   ],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss',
 })
 export class Portfolio implements OnInit {
+
+  public categories: string[] = Object.keys(CategoryEnum);
+
   private seo = inject(SeoService);
 
   ngOnInit() {
@@ -27,15 +34,36 @@ export class Portfolio implements OnInit {
     });
   }
 
-    public projects: ProjectInfoCard[] = [
-      {
-        topic: 'Desarrollo web',
-        title: 'Fasomes - Mensajería',
-        description: 'Plataforma completa de gestión de envíos de mensajería a través de diferentes franquicias como Interrapidisimo, Coodinadora y/o Envía.',
-        tags: ["Angular", "Laravel", "MySQL"],
-        path: "",
-        externalLink: "",
-        image: "dummy.png",
-      }
-    ];
+  public projects: ProjectInfoCard[] = [
+    {
+      topic: 'Desarrollo web',
+      title: 'Fasomes - Mensajería',
+      description: 'Plataforma completa de gestión de envíos de mensajería a través de diferentes franquicias como Interrapidisimo, Coodinadora y/o Envía.',
+      tags: [
+        TechnologiesEnum.ANGULAR,
+        TechnologiesEnum.LARAVEL,
+        TechnologiesEnum.MYSQL
+      ],
+      path: "",
+      externalLink: "",
+      image: "dummy.png",
+      category: CategoryEnum.CustomSoftware
+    },
+    {
+      topic: 'Software as a Service',
+      title: 'Factory',
+      description: 'Plataforma para la gestión de su negocio, realice la configuración para la producción de sus productos' +
+        'mediante la configuración de formulaciones, ordenes de producción, ordenes de envasado e inventarios.',
+      tags: [
+        TechnologiesEnum.ANGULAR,
+        TechnologiesEnum.JAVA,
+        TechnologiesEnum.SPRING_BOOT,
+        TechnologiesEnum.POSTGRESQL,
+      ],
+      path: "",
+      externalLink: "",
+      image: "dummy.png",
+      category: CategoryEnum.CustomSoftware
+    }
+  ];
 }
