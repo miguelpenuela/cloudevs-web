@@ -4,6 +4,10 @@ import {ProjectCard} from '../../shared/components/project-card/project-card';
 import {ProjectInfoCard} from '../../shared/models/IProjectInfoCard';
 import {AnimateOnScrollDirective} from '../../shared/directives/animate-on-scroll.directive';
 import {SeoService} from '../../shared/services/seo.service';
+import {CategoryEnum} from '../../shared/enums/categoryEnum';
+import {TechnologiesEnum} from '../../shared/enums/technologiesEnum';
+import {CategoryTag} from '../../shared/components/category-tag/category-tag';
+import {projectsList} from '../../shared/data/projects';
 
 @Component({
   selector: 'portfolio-section',
@@ -11,11 +15,15 @@ import {SeoService} from '../../shared/services/seo.service';
     EnfasisTag,
     ProjectCard,
     AnimateOnScrollDirective,
+    CategoryTag,
   ],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss',
 })
 export class Portfolio implements OnInit {
+
+  public categories: string[] = Object.values(CategoryEnum);
+  public projects: ProjectInfoCard[] = [];
   private seo = inject(SeoService);
 
   ngOnInit() {
@@ -25,17 +33,14 @@ export class Portfolio implements OnInit {
       keywords: 'portafolio proyectos software, casos de éxito, desarrollo web Colombia, aplicaciones móviles',
       canonical: 'https://www.cloudevs.co/portfolio',
     });
+    this.projects = projectsList;
   }
 
-    public projects: ProjectInfoCard[] = [
-      {
-        topic: 'Desarrollo web',
-        title: 'Fasomes - Mensajería',
-        description: 'Plataforma completa de gestión de envíos de mensajería a través de diferentes franquicias como Interrapidisimo, Coodinadora y/o Envía.',
-        tags: ["Angular", "Laravel", "MySQL"],
-        path: "",
-        externalLink: "",
-        image: "dummy.png",
-      }
-    ];
+  handleCategorySelected(selectedCategory: any) {
+    if (selectedCategory === 'Todo') {
+      this.projects = projectsList;
+      return;
+    }
+    this.projects = projectsList.filter(project => project.category === selectedCategory);
+  }
 }
